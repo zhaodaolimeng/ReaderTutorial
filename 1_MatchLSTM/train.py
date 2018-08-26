@@ -9,6 +9,7 @@ NO FLAGS
 if __name__ == "__main__":
 
     pred = dynamicRNN(x, seqlen, weights, biases)
+    
 
     # Define loss and optimizer
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=y))
