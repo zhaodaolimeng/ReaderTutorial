@@ -136,7 +136,7 @@ def build_feature(examples, word2idx_dict, para_limit, ques_limit, ans_limit, ou
                 "ques_idxs": Feature(bytes_list=BytesList(value=[ques_idxs.tostring()])),
                 "y1": Feature(bytes_list=BytesList(value=[y1.tostring()])),
                 "y2": Feature(bytes_list=BytesList(value=[y1.tostring()])),
-                "id": Feature(bytes_list=Int64List(value=[example['id']]))
+                "id": Feature(int64_list=Int64List(value=[example['id']]))
             }))
             writer.write(record.SerializeToString())
 
